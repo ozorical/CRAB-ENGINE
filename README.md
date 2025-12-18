@@ -1,7 +1,7 @@
-# CRAB-ENGINE V4 - OUTDATED (Works up to 1.21.101)
-# DEPRICATED & NO LONGER MAINTAINED!
+# 🦀 CRAB-ENGINE V4
+## ⚠️ Deprecated & No Longer Maintained (Works up to **1.21.101**)
 
-This project is no longer maintained, ans is officially depricated as of 18 dec 2025.
+This project is no longer maintained and is officially **deprecated** as of **18 Dec 2025**.
 
 > **The end of an era, the beginning of open source.**
 
