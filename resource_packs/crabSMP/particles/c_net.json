@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "particle_effect": {
+    "description": {
+      "identifier": "sign.cnet2",
+      "basic_render_parameters": {
+        "material": "particles_alpha",
+        "texture": "textures/particle/c_net2"
+      }
+    },
+    "components": {
+      "minecraft:emitter_rate_steady": {
+        "spawn_rate": 1,
+        "max_particles": 1
+      },
+      "minecraft:emitter_lifetime_once": {
+        "active_time": 2
+      },
+      "minecraft:emitter_shape_point": {},
+      "minecraft:particle_lifetime_expression": {
+        "max_lifetime": 1
+      },
+      "minecraft:particle_initial_speed": 0,
+      "minecraft:particle_motion_dynamic": {},
+      "minecraft:particle_appearance_billboard": {
+        "size": [8.5, 5.0], 
+        "facing_camera_mode": "rotate_y",
+        "rotation": 0.0,
+        "uv": {
+          "texture_width": 550,
+          "texture_height": 100,
+          "uv": [0, 0],
+          "uv_size": [550, 100]
+        }
+      }
+    }
+  }
+}

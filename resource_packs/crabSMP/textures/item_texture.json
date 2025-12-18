@@ -1,0 +1,14 @@
+{
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "common_key": {
+            "textures": "textures/items/keys/common_key"
+        },
+        "rare_key": {
+            "textures": "textures/items/keys/rare_key"
+        },
+        "mythic_key": {
+            "textures": "textures/items/keys/mythic_key"
+        }
+    }
+}

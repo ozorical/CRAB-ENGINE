@@ -1,0 +1,70 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:entity": {
+    "description": {
+    "identifier": "custom:storage",
+    "is_spawnable": true,
+    "is_summonable": true,
+    "is_experimental": false
+    },
+    "component_groups": {
+    "brine:despawn": {
+    "minecraft:instant_despawn": {}
+    }
+    },
+    "components": {
+    "minecraft:inventory": {
+    "container_type": "container",
+    "inventory_size": 255,
+    "private": false,
+    "can_be_siphoned_from": false
+    },
+    "minecraft:damage_sensor": {
+    "triggers": {
+    "cause": "all",
+    "deals_damage": false
+    }
+    },
+    "minecraft:type_family": {
+    "family": [
+    "auction"
+    ]
+    },
+    "minecraft:health": {
+    "value": 1,
+    "max": 1,
+    "min": 1
+    },
+    "minecraft:collision_box": {
+    "width": 0.0,
+    "height": 0.0
+    },
+    "minecraft:push_through": {
+    "value": 1
+    },
+    "minecraft:scale": {
+    "value": 0.0
+    },
+    "minecraft:knockback_resistance": {
+    "value": 100,
+    "max": 100
+    },
+    "minecraft:physics": {
+    "has_gravity": false
+    },
+    "minecraft:tick_world": {
+    "never_despawn": true,
+    "radius": 2
+    }
+    },
+    "events": {
+    "brine:despawn": {
+    "add": {
+    "component_groups": [
+    "brine:despawn"
+    ]
+    }
+    }
+    }
+    }
+    }

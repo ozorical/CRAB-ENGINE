@@ -1,0 +1,42 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "§cCrab-Engine §f4.8 BETA",
+    "description": "§eBetaAPI Engine for CrabSMP.",
+    "uuid": "dc0dad31-42cd-4ae3-9e65-f4d76a997b4a",
+    "version": [
+      4,
+      5,
+      2
+    ],
+    "min_engine_version": [
+      1,
+      20,
+      30
+    ]
+  },
+  "modules": [
+    {
+      "description": "Script resources",
+      "language": "javascript",
+      "type": "script",
+      "uuid": "376fd65d-253d-452b-b13a-9279161f0f6c",
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.1.0-beta"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.1.0-beta"
+    }
+  ]
+}

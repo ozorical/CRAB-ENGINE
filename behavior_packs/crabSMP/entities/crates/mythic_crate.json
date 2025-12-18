@@ -1,0 +1,77 @@
+{
+    "format_version": "1.21.2",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "on_damage": {
+                            "event": "hit"
+                        },
+                        "deals_damage": false
+                    }
+                ]
+            },
+            "minecraft:type_family": {
+                "family": [
+                    "manager"
+                ]
+            },
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            "minecraft:movement": {
+                "value": 0
+            },
+            "minecraft:jump.static": {
+                "jump_power": 0
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": false
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:knockback_resistance": {
+                "value": 1
+            },
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 1
+            },
+            "minecraft:nameable": {
+                "always_show": true,
+                "allow_name_tag_renaming": false
+            },
+            "minecraft:interact": {
+                "interactions": [
+                    {
+                        "on_interact": {
+                            "event": "hit"
+                        }
+                    }
+                ]
+            }
+        },
+        "component_groups": {},
+        "events": {
+            "hit": {
+                "queue_command": {
+                    "target": "other",
+                    "command": [
+                        "scriptevent crab:mythic"
+                    ]
+                }
+            }
+        }
+    }
+}

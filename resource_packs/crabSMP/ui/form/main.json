@@ -1,0 +1,343 @@
+{
+  "namespace": "main",
+  //Main Panel
+  "panel": {
+    "type": "panel",
+    "size": [234, 100],
+    "offset": [0, 0],
+    "layer": 2,
+    "controls": [
+      {   //Background
+        "background_image": {
+          "type": "image",
+          "texture": "textures/ui/custom/background",
+          "size": [ 325, 220],
+          "offset": [0, 0]
+        }
+      },
+      {   //Title Background
+        "background_image": {
+          "type": "image",
+          "texture": "textures/ui/custom/title",
+          "size": [ 140, 24],
+          "offset": [-95, -98.5]
+        }
+      },
+      {   //Close Background
+        "background_image": {
+          "type": "image",
+          "texture": "textures/ui/custom/close_bg",
+          "size": [ 140, 24],
+          "offset": [95, -98.5]
+        }
+      },
+      {   //Title
+          "title_text": {
+              "layer": 5,
+              "type": "label",
+              "font_type": "MinecraftTen",
+              "text": "#title_text",
+              "text_alignment": "left",
+              "font_scale_factor": 1.5,
+              "anchor_from": "top_middle",
+              "anchor_to": "top_middle",
+              "offset": [
+                  -120,
+                  -59.5
+              ],
+              "shadow": true,
+              "bindings": [
+                  {
+                      "binding_name": "#title_text",
+                      "binding_type": "global"
+                  }
+              ]
+          }
+      },
+      {   //Close button
+				  "close": {
+					"type": "image",
+					"size": [18, 18],
+					"alpha": 1.0,
+					"anchor_from": "centre_middle",
+					"anchor_to": "centre_middle",
+					"offset": [
+						147,
+						-98
+					],
+					"layer": 10,
+					"controls": [{
+						"custom_close_button@server_form.close_button": {
+							"anchor_from": "centre_middle",
+							"anchor_to": "centre_middle",
+							"size": [
+								18,
+								18
+							],
+							"offset": [
+								0,
+								0
+							]
+						}
+					}]
+				}
+			},
+      {
+        "scrolling_panel@common.scrolling_panel": {
+          "$scroll_bar_contained": false,
+          "offset": [-5, -5],
+          "size": [320, 160],
+          "$scrolling_content": "main.grid_scroll_panel",
+          "$show_background": false,
+          "$scrolling_pane_size": ["100%", "115%"],
+          "$scrolling_pane_offset": [0, 0],
+          "$bindings": [
+            {
+              "binding_name": "#form_button_length",
+              "binding_name_override": "#collection_length"
+            },
+            {
+              "binding_type": "view",
+              "source_property_name": "((#form_button_text - '§a§a') = #form_button_text)",
+              "target_property_name": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "grid_scroll_panel": {
+    "type": "grid",
+    "size": [325, "100%c"],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "grid_item_template": "main.grid_buttons",
+    "grid_rescaling_type": "horizontal",
+    "layer": 50,
+    "collection_name": "form_buttons",
+    "bindings": [
+      {
+        "binding_name": "#form_button_length",
+        "binding_name_override": "#maximum_grid_items"
+      },
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_name": "#form_button_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "((#form_button_text - '§a§a') = #form_button_text)",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "grid_buttons": {
+    "type": "panel",
+    "size": [100, 90],
+    "layer": 2,
+    "controls": [
+      {
+        "select_buttons@main.select_buttons": {}
+      }
+    ],
+    "bindings": [
+      {
+        "binding_type": "collection",
+        "binding_collection_name": "form_buttons",
+        "binding_name": "#form_button_text"
+      },
+      {
+        "binding_type": "view",
+        "source_property_name": "(not ((#form_button_text - '§s§l') = #form_button_text))",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "select_buttons": {
+    "type": "panel",
+    "size": ["100% - 4px", "100% - 4px"],
+    "controls": [
+      {
+        "button@common.button": {
+          "$pressed_button_name": "button.form_button_click",
+          "controls": [
+            {
+              "default@main.button_parts": {
+                "$texture": "textures/ui/custom/warps/button"
+              }
+            },
+            {
+              "hover@main.button_parts_hover": {
+                "$texture": "textures/ui/custom/warps/button_hover"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_type": "collection_details",
+              "binding_collection_name": "form_buttons"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_parts": {
+    "type": "panel",
+    "$bindings|default": [],
+    "$offset|default": [0, 0],
+    "controls": [
+      {
+        "buttom_image": {
+          "layer": 2,
+          "type": "image",
+          "texture": "$texture",
+          "offset": [0, 0]
+        }
+      },
+      {
+        "description_text": {
+            "size": [
+                "100%",
+                  30
+            ],
+            "offset": [0, 38],
+            "layer": 2,
+            "type": "image",
+            "controls": [
+                {
+                    "entry_description_label": {
+                      "type": "label",
+                      "offset": [0, -11],
+                      "text": "#form_button_text",
+                      "font_scale_factor": 1.0,
+                      "font_type": "MinecraftTen",
+                      "layer": 15,
+                      "text_alignment": "center",
+                      "bindings": [
+                            {
+                                "binding_type": "collection",
+                                "binding_collection_name": "form_buttons",
+                                "binding_condition": "none",
+                                "binding_name": "#form_button_text",
+                                "binding_name_override": "#form_button_text"
+                            },
+                            {
+                              "binding_type": "view",
+                              "target_property_name": "#visible"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+      },
+      {
+        "button_icon": {
+          "type": "image",
+          "layer": 1,
+          "offset": [0, 0],
+          "size": [130, 130],
+          "clips_children": true,
+          "clip_offset": [18, 23],
+          "bindings": [
+            {
+              "binding_name": "#form_button_texture",
+              "binding_name_override": "#texture",
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_name": "#form_button_texture_file_system",
+              "binding_name_override": "#texture_file_system",
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "button_parts_hover": {
+    "type": "panel",
+    "$bindings|default": [],
+    "$offset|default": [0, 0],
+    "controls": [
+      {
+        "buttom_image": {
+          "layer": 2,
+          "type": "image",
+          "texture": "$texture",
+          "offset": [0, -1]
+        }
+      },
+      {
+        "description_text": {
+            "size": [
+                "100%",
+                30
+            ],
+            "offset": [0, 38],
+            "layer": 2,
+            "type": "image",
+            "controls": [
+                {
+                    "entry_description_label": {
+                      "type": "label",
+                      "offset": [0, -12],
+                      "text": "#form_button_text",
+                      "font_scale_factor": 1.0,
+                      "font_type": "MinecraftTen",
+                      "layer": 15,
+                      "text_alignment": "center",
+                      "bindings": [
+                            {
+                                "binding_type": "collection",
+                                "binding_collection_name": "form_buttons",
+                                "binding_condition": "none",
+                                "binding_name": "#form_button_text",
+                                "binding_name_override": "#form_button_text"
+                            },
+                            {
+                              "binding_type": "view",
+                              "target_property_name": "#visible"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+      },
+      {
+        "button_icon": {
+          "type": "image",
+          "layer": 1,
+          "offset": [0, -1],
+          "size": [130, 130],
+          "clips_children": true,
+          "clip_offset": [18, 23],
+          "bindings": [
+            {
+              "binding_name": "#form_button_texture",
+              "binding_name_override": "#texture",
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons"
+            },
+            {
+              "binding_name": "#form_button_texture_file_system",
+              "binding_name_override": "#texture_file_system",
+              "binding_type": "collection",
+              "binding_collection_name": "form_buttons"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

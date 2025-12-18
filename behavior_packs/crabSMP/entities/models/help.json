@@ -1,0 +1,74 @@
+{
+	"format_version": "1.21.2",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "npc:help",
+			"runtime_identifier": "npc:help",
+			"is_summonable": true,
+			"is_spawnable": true
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"npc"
+				]
+			},
+			"minecraft:health": {
+				"value": 32767,
+				"max": 32767
+			},
+			"minecraft:jump.static": {
+				"jump_power": 0
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": false
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 3
+			},
+			"minecraft:nameable": {
+				"alwaysShow": true,
+				"allowNameTagRenaming": true
+			},
+			"minecraft:scale": {
+				"value": 1.5
+			},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false,
+					"on_damage": {
+						"event": "crab:help"
+					}
+				}
+			},
+			"minecraft:interact": {
+				"interactions": {
+					"on_interact": {
+						"event": "crab:help"
+					}
+				}
+			}
+		},
+		"events": {
+			"crab:help": {
+				"queue_command": {
+					"target": "other",
+					"command": [
+						"function npc/help"
+					]
+				}
+			}
+		},
+		"component_groups": {}
+	}
+}

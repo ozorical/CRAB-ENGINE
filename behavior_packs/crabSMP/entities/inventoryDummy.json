@@ -1,0 +1,58 @@
+{
+    "format_version": "1.20.80",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "crab:inventory_dummy",
+            "is_spawnable": false,
+            "is_summonable": true
+        },
+        "component_groups": {},
+        "components": {
+            "minecraft:tameable": {
+                "probability": 1
+            },
+            "minecraft:inventory": {
+                "additional_slots_per_strength": 0,
+                "can_be_siphoned_from": false,
+                "container_type": "horse",
+                "inventory_size": 54,
+                "private": false,
+                "restrict_to_owner": true
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "width": 2,
+                        "height": 2,
+                        "pivot": [
+                            0,
+                            1,
+                            0
+                        ]
+                    }
+                ]
+            },
+            "minecraft:collision_box": {
+                "height": 2,
+                "width": 2
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "cause": "all",
+                        "deals_damage": false
+                    }
+                ]
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            }
+        },
+        "events": {}
+    }
+}

@@ -1,0 +1,820 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "minecraft:player",
+      "spawn_category": "creature",
+      "is_spawnable": false,
+      "is_summonable": false
+    },
+    "component_groups": {
+      "minecraft:add_raid_omen": {
+        "minecraft:spell_effects": {
+          "add_effects": [
+            {
+              "effect": "raid_omen",
+              "duration": 30,
+              "display_on_screen_animation": true
+            }
+          ],
+          "remove_effects": "bad_omen"
+        },
+        "minecraft:timer": {
+          "time": [
+            0.0,
+            0.0
+          ],
+          "looping": false,
+          "time_down_event": {
+            "event": "minecraft:clear_add_raid_omen",
+            "target": "self"
+          }
+        }
+      },
+      "minecraft:clear_raid_omen_spell_effect": {
+        "minecraft:spell_effects": {}
+      },
+      "minecraft:raid_trigger": {
+        "minecraft:raid_trigger": {
+          "triggered_event": {
+            "event": "minecraft:remove_raid_trigger",
+            "target": "self"
+          }
+        }
+      },
+      "unitx:health1": {
+        "minecraft:health": {
+          "max": 2
+        }
+      },
+      "unitx:health2": {
+        "minecraft:health": {
+          "max": 4
+        }
+      },
+      "unitx:health3": {
+        "minecraft:health": {
+          "max": 6
+        }
+      },
+      "unitx:health4": {
+        "minecraft:health": {
+          "max": 8
+        }
+      },
+      "unitx:health5": {
+        "minecraft:health": {
+          "max": 10
+        }
+      },
+      "unitx:health6": {
+        "minecraft:health": {
+          "max": 12
+        }
+      },
+      "unitx:health7": {
+        "minecraft:health": {
+          "max": 14
+        }
+      },
+      "unitx:health8": {
+        "minecraft:health": {
+          "max": 16
+        }
+      },
+      "unitx:health9": {
+        "minecraft:health": {
+          "max": 18
+        }
+      },
+      "unitx:health10": {
+        "minecraft:health": {
+          "max": 20
+        }
+      },
+      "unitx:health11": {
+        "minecraft:health": {
+          "max": 22
+        }
+      },
+      "unitx:health12": {
+        "minecraft:health": {
+          "max": 24
+        }
+      },
+      "unitx:health13": {
+        "minecraft:health": {
+          "max": 26
+        }
+      },
+      "unitx:health14": {
+        "minecraft:health": {
+          "max": 28
+        }
+      },
+      "unitx:health15": {
+        "minecraft:health": {
+          "max": 30
+        }
+      },
+      "unitx:health16": {
+        "minecraft:health": {
+          "max": 32
+        }
+      },
+      "unitx:health17": {
+        "minecraft:health": {
+          "max": 34
+        }
+      },
+      "unitx:health18": {
+        "minecraft:health": {
+          "max": 36
+        }
+      },
+      "unitx:health19": {
+        "minecraft:health": {
+          "max": 38
+        }
+      },
+      "unitx:health20": {
+        "minecraft:health": {
+          "max": 40
+        }
+      },
+      "unitx:health21": {
+        "minecraft:health": {
+          "max": 42
+        }
+      },
+      "unitx:health22": {
+        "minecraft:health": {
+          "max": 44
+        }
+      },
+      "unitx:health23": {
+        "minecraft:health": {
+          "max": 46
+        }
+      },
+      "unitx:health24": {
+        "minecraft:health": {
+          "max": 48
+        }
+      },
+      "unitx:health25": {
+        "minecraft:health": {
+          "max": 50
+        }
+      },
+      "unitx:health26": {
+        "minecraft:health": {
+          "max": 52
+        }
+      },
+      "unitx:health27": {
+        "minecraft:health": {
+          "max": 54
+        }
+      },
+      "unitx:health28": {
+        "minecraft:health": {
+          "max": 56
+        }
+      },
+      "unitx:health29": {
+        "minecraft:health": {
+          "max": 58
+        }
+      },
+      "unitx:health30": {
+        "minecraft:health": {
+          "max": 60
+        }
+      },
+      "unitx:health31": {
+        "minecraft:health": {
+          "max": 62
+        }
+      },
+      "unitx:health32": {
+        "minecraft:health": {
+          "max": 64
+        }
+      },
+      "unitx:health33": {
+        "minecraft:health": {
+          "max": 66
+        }
+      },
+      "unitx:health34": {
+        "minecraft:health": {
+          "max": 68
+        }
+      },
+      "unitx:health35": {
+        "minecraft:health": {
+          "max": 70
+        }
+      },
+      "unitx:health36": {
+        "minecraft:health": {
+          "max": 72
+        }
+      },
+      "unitx:health37": {
+        "minecraft:health": {
+          "max": 74
+        }
+      },
+      "unitx:health38": {
+        "minecraft:health": {
+          "max": 76
+        }
+      },
+      "unitx:health39": {
+        "minecraft:health": {
+          "max": 78
+        }
+      },
+      "unitx:health40": {
+        "minecraft:health": {
+          "max": 80
+        }
+      },
+      "unitx:health41": {
+        "minecraft:health": {
+          "max": 82
+        }
+      },
+      "unitx:health42": {
+        "minecraft:health": {
+          "max": 84
+        }
+      },
+      "unitx:health43": {
+        "minecraft:health": {
+          "max": 86
+        }
+      },
+      "unitx:health44": {
+        "minecraft:health": {
+          "max": 88
+        }
+      },
+      "unitx:health45": {
+        "minecraft:health": {
+          "max": 90
+        }
+      },
+      "unitx:health46": {
+        "minecraft:health": {
+          "max": 92
+        }
+      },
+      "unitx:health47": {
+        "minecraft:health": {
+          "max": 94
+        }
+      },
+      "unitx:health48": {
+        "minecraft:health": {
+          "max": 96
+        }
+      },
+      "unitx:health49": {
+        "minecraft:health": {
+          "max": 98
+        }
+      },
+      "unitx:health50": {
+        "minecraft:health": {
+          "max": 100
+        }
+      }
+    },
+    "components": {
+      "minecraft:experience_reward": {
+        "on_death": "Math.Min(query.player_level * 7, 100)"
+      },
+      "minecraft:type_family": {
+        "family": [
+          "player"
+        ]
+      },
+      "minecraft:is_hidden_when_invisible": {},
+      "minecraft:loot": {
+        "table": "loot_tables/empty.json"
+      },
+      "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.8
+      },
+      "minecraft:can_climb": {},
+      "minecraft:movement": {
+        "value": 0.1
+      },
+      "minecraft:hurt_on_condition": {
+        "damage_conditions": [
+          {
+            "filters": {
+              "test": "in_lava",
+              "subject": "self",
+              "operator": "==",
+              "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+          }
+        ]
+      },
+      "minecraft:attack": {
+        "damage": 1
+      },
+      "minecraft:exhaustion_values": {
+        "heal": 6,
+        "jump": 0.05,
+        "sprint_jump": 0.2,
+        "mine": 0.005,
+        "attack": 0.1,
+        "damage": 0.1,
+        "walk": 0.0,
+        "sprint": 0.1,
+        "swim": 0.01
+      },
+      "minecraft:player.saturation": {
+        "value": 5,
+        "max": 20
+      },
+      "minecraft:player.exhaustion": {
+        "value": 0,
+        "max": 20
+      },
+      "minecraft:player.level": {
+        "value": 0,
+        "max": 24791
+      },
+      "minecraft:player.experience": {
+        "value": 0,
+        "max": 1
+      },
+      "minecraft:breathable": {
+        "total_supply": 15,
+        "suffocate_time": -1,
+        "inhale_time": 3.75,
+        "generates_bubbles": false
+      },
+      "minecraft:nameable": {
+        "always_show": true,
+        "allow_name_tag_renaming": false
+      },
+      "minecraft:physics": {
+        "push_towards_closest_space": true
+      },
+      "minecraft:pushable": {
+        "is_pushable": false,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:insomnia": {
+        "days_until_insomnia": 3
+      },
+      "minecraft:rideable": {
+        "seat_count": 2,
+        "family_types": [
+          "parrot_tame"
+        ],
+        "pull_in_entities": true,
+        "seats": [
+          {
+            "position": [
+              0.4,
+              -0.2,
+              -0.1
+            ],
+            "min_rider_count": 0,
+            "max_rider_count": 0,
+            "lock_rider_rotation": 0
+          },
+          {
+            "position": [
+              -0.4,
+              -0.2,
+              -0.1
+            ],
+            "min_rider_count": 1,
+            "max_rider_count": 2,
+            "lock_rider_rotation": 0
+          }
+        ]
+      },
+      "minecraft:conditional_bandwidth_optimization": {},
+      "minecraft:block_climber": {},
+      "minecraft:environment_sensor": {
+        "triggers": [
+          {
+            "filters": {
+              "all_of": [
+                {
+                  "test": "has_mob_effect",
+                  "subject": "self",
+                  "value": "bad_omen"
+                },
+                {
+                  "test": "is_in_village",
+                  "subject": "self",
+                  "value": true
+                }
+              ]
+            },
+            "event": "minecraft:gain_raid_omen"
+          }
+        ]
+      }
+    },
+    "events": {
+      "minecraft:gain_raid_omen": {
+        "add": {
+          "component_groups": [
+            "minecraft:add_raid_omen"
+          ]
+        }
+      },
+      "minecraft:clear_add_raid_omen": {
+        "remove": {
+          "component_groups": [
+            "minecraft:add_raid_omen"
+          ]
+        },
+        "add": {
+          "component_groups": [
+            "minecraft:clear_raid_omen_spell_effect"
+          ]
+        }
+      },
+      "minecraft:trigger_raid": {
+        "add": {
+          "component_groups": [
+            "minecraft:raid_trigger"
+          ]
+        }
+      },
+      "minecraft:remove_raid_trigger": {
+        "remove": {
+          "component_groups": [
+            "minecraft:raid_trigger"
+          ]
+        }
+      },
+      "unitx:health1": {
+        "add": {
+          "component_groups": [
+            "unitx:health1"
+          ]
+        }
+      },
+      "unitx:health2": {
+        "add": {
+          "component_groups": [
+            "unitx:health2"
+          ]
+        }
+      },
+      "unitx:health3": {
+        "add": {
+          "component_groups": [
+            "unitx:health3"
+          ]
+        }
+      },
+      "unitx:health4": {
+        "add": {
+          "component_groups": [
+            "unitx:health4"
+          ]
+        }
+      },
+      "unitx:health5": {
+        "add": {
+          "component_groups": [
+            "unitx:health5"
+          ]
+        }
+      },
+      "unitx:health6": {
+        "add": {
+          "component_groups": [
+            "unitx:health6"
+          ]
+        }
+      },
+      "unitx:health7": {
+        "add": {
+          "component_groups": [
+            "unitx:health7"
+          ]
+        }
+      },
+      "unitx:health8": {
+        "add": {
+          "component_groups": [
+            "unitx:health8"
+          ]
+        }
+      },
+      "unitx:health9": {
+        "add": {
+          "component_groups": [
+            "unitx:health9"
+          ]
+        }
+      },
+      "unitx:health10": {
+        "add": {
+          "component_groups": [
+            "unitx:health10"
+          ]
+        }
+      },
+      "unitx:health11": {
+        "add": {
+          "component_groups": [
+            "unitx:health11"
+          ]
+        }
+      },
+      "unitx:health12": {
+        "add": {
+          "component_groups": [
+            "unitx:health12"
+          ]
+        }
+      },
+      "unitx:health13": {
+        "add": {
+          "component_groups": [
+            "unitx:health13"
+          ]
+        }
+      },
+      "unitx:health14": {
+        "add": {
+          "component_groups": [
+            "unitx:health14"
+          ]
+        }
+      },
+      "unitx:health15": {
+        "add": {
+          "component_groups": [
+            "unitx:health15"
+          ]
+        }
+      },
+      "unitx:health16": {
+        "add": {
+          "component_groups": [
+            "unitx:health16"
+          ]
+        }
+      },
+      "unitx:health17": {
+        "add": {
+          "component_groups": [
+            "unitx:health17"
+          ]
+        }
+      },
+      "unitx:health18": {
+        "add": {
+          "component_groups": [
+            "unitx:health18"
+          ]
+        }
+      },
+      "unitx:health19": {
+        "add": {
+          "component_groups": [
+            "unitx:health19"
+          ]
+        }
+      },
+      "unitx:health20": {
+        "add": {
+          "component_groups": [
+            "unitx:health20"
+          ]
+        }
+      },
+      "unitx:health21": {
+        "add": {
+          "component_groups": [
+            "unitx:health21"
+          ]
+        }
+      },
+      "unitx:health22": {
+        "add": {
+          "component_groups": [
+            "unitx:health22"
+          ]
+        }
+      },
+      "unitx:health23": {
+        "add": {
+          "component_groups": [
+            "unitx:health23"
+          ]
+        }
+      },
+      "unitx:health24": {
+        "add": {
+          "component_groups": [
+            "unitx:health24"
+          ]
+        }
+      },
+      "unitx:health25": {
+        "add": {
+          "component_groups": [
+            "unitx:health25"
+          ]
+        }
+      },
+      "unitx:health26": {
+        "add": {
+          "component_groups": [
+            "unitx:health26"
+          ]
+        }
+      },
+      "unitx:health27": {
+        "add": {
+          "component_groups": [
+            "unitx:health27"
+          ]
+        }
+      },
+      "unitx:health28": {
+        "add": {
+          "component_groups": [
+            "unitx:health28"
+          ]
+        }
+      },
+      "unitx:health29": {
+        "add": {
+          "component_groups": [
+            "unitx:health29"
+          ]
+        }
+      },
+      "unitx:health30": {
+        "add": {
+          "component_groups": [
+            "unitx:health30"
+          ]
+        }
+      },
+      "unitx:health31": {
+        "add": {
+          "component_groups": [
+            "unitx:health31"
+          ]
+        }
+      },
+      "unitx:health32": {
+        "add": {
+          "component_groups": [
+            "unitx:health32"
+          ]
+        }
+      },
+      "unitx:health33": {
+        "add": {
+          "component_groups": [
+            "unitx:health33"
+          ]
+        }
+      },
+      "unitx:health34": {
+        "add": {
+          "component_groups": [
+            "unitx:health34"
+          ]
+        }
+      },
+      "unitx:health35": {
+        "add": {
+          "component_groups": [
+            "unitx:health35"
+          ]
+        }
+      },
+      "unitx:health36": {
+        "add": {
+          "component_groups": [
+            "unitx:health36"
+          ]
+        }
+      },
+      "unitx:health37": {
+        "add": {
+          "component_groups": [
+            "unitx:health37"
+          ]
+        }
+      },
+      "unitx:health38": {
+        "add": {
+          "component_groups": [
+            "unitx:health38"
+          ]
+        }
+      },
+      "unitx:health39": {
+        "add": {
+          "component_groups": [
+            "unitx:health39"
+          ]
+        }
+      },
+      "unitx:health40": {
+        "add": {
+          "component_groups": [
+            "unitx:health40"
+          ]
+        }
+      },
+      "unitx:health41": {
+        "add": {
+          "component_groups": [
+            "unitx:health41"
+          ]
+        }
+      },
+      "unitx:health42": {
+        "add": {
+          "component_groups": [
+            "unitx:health42"
+          ]
+        }
+      },
+      "unitx:health43": {
+        "add": {
+          "component_groups": [
+            "unitx:health43"
+          ]
+        }
+      },
+      "unitx:health44": {
+        "add": {
+          "component_groups": [
+            "unitx:health44"
+          ]
+        }
+      },
+      "unitx:health45": {
+        "add": {
+          "component_groups": [
+            "unitx:health45"
+          ]
+        }
+      },
+      "unitx:health46": {
+        "add": {
+          "component_groups": [
+            "unitx:health46"
+          ]
+        }
+      },
+      "unitx:health47": {
+        "add": {
+          "component_groups": [
+            "unitx:health47"
+          ]
+        }
+      },
+      "unitx:health48": {
+        "add": {
+          "component_groups": [
+            "unitx:health48"
+          ]
+        }
+      },
+      "unitx:health49": {
+        "add": {
+          "component_groups": [
+            "unitx:health49"
+          ]
+        }
+      },
+      "unitx:health50": {
+        "add": {
+          "component_groups": [
+            "unitx:health50"
+          ]
+        }
+      }
+    }
+  }
+}
