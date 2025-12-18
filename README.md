@@ -1,4 +1,4 @@
-# CRAB-ENGINE V4 - OUTDATED
+# CRAB-ENGINE V4 - OUTDATED (Works up to 1.21.101)
 
 > **The end of an era, the beginning of open source.**
 
